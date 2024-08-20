@@ -8,6 +8,12 @@ class MapController extends Controller
 {
     public function index()
     {
-        return view('map.index'); // 正しい書き方
+        return view('map.index'); 
+    }
+    
+    public function hamburger()
+    {
+        return view('map.hamburger'); 
     }
 }
+
