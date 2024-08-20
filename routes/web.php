@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
 
 use App\Http\Controllers\MapController;
+use App\Http\Controllers\NotificationsController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -47,6 +48,9 @@ Route::get('/map', [MapController::class, 'index'])->name('map.index');
 
     Route::get('/myposts', [PostController::class, 'myPosts'])->name('myposts');
 // });
+
+Route::get('/notifications', [NotificationsController::class, 'index']);
+
 
 require __DIR__.'/auth.php';
 
