@@ -12,6 +12,9 @@
                 font-semibold text-gray-800 hover:bg-gray-100 text-decoration-none">
                     掲示板へ移動
                 </a>
+                <a href="{{ route('map.index') }}">
+                    MAPへ移動
+                </a>
             </div>
         </div>
     </div>
