@@ -15,5 +15,11 @@ class MapController extends Controller
     {
         return view('map.hamburger'); 
     }
+    
+    public function shuttered1()
+    {
+        return view('map.shuttered1'); 
+    }
+    
 }
 

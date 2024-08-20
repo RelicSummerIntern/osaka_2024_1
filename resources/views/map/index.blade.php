@@ -18,6 +18,8 @@
 
 <map name="storemap">
 <area shape="rect" coords="622,76,805,266" href="{{ route('map.hamburger') }}" alt="Hamburger Shop">
+<area shape="rect" coords="88,146,248,303" href="{{ route('map.shuttered1') }}" alt="shuttered Shop1">
+
 
 </map>
 
