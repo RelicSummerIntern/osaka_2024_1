@@ -15,6 +15,10 @@
                 <a href="{{ route('map.index') }}">
                     MAPへ移動
                 </a>
+                　
+                <a href="http://localhost/notifications/">
+                    お知らせページへ移動    
+                </a>
             </div>
         </div>
     </div>
