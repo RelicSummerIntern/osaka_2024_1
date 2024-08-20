@@ -8,5 +8,10 @@
 <body>
     <x-link-on-the-top/>
     <h1>お知らせ</h1>
+    <ul>
+        @foreach($notifications as $notification)
+            <li><a href='http://localhost/notification/{{ $notification -> notification_id }}'>{{ $notification->title }}</a></li>
+        @endforeach
+    </ul>
 </body>
 </html>
