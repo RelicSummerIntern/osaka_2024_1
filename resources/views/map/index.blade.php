@@ -1,24 +1,23 @@
 <html>
 
 <head>
-    <title>Hello world</title>
+    <title>zimo_map</title>
     <style>
         body {
             font-size: 16px;
             color: #999;
         }
 
-        h1 {
-            font-size: 120px;
-            text-align: right;
-            color: #fafafa;
-            margin: -50px 0px -120px 0px;
-        }
+
     </style>
 </head>
 
 <body>
-    <h1>Index</h1>
+    <h1>○○商店街　簡単MAP</h1>
+    <img src="img/building_food_hambuger.png" alt="Local Image" width="400">
+    <img src="img/yaoya.png" alt="Local Image" width="400">
+    <img src="img/building_mokei.png" alt="Local Image" width="400">
+
 </body>
 
 </html>
