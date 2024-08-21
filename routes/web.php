@@ -50,6 +50,7 @@ Route::get('/map', [MapController::class, 'index'])->name('map.index');
 // });
 
 Route::get('/notifications', [NotificationsController::class, 'index']);
+Route::get('/notifications/{id}', [NotificationsController::class, 'show']);
 
 
 require __DIR__.'/auth.php';
