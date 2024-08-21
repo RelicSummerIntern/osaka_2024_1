@@ -31,4 +31,13 @@ class NotificationsController extends Controller
         return view('notifications.show', ['prevNotification'=>$prevNotification, 'notification'=>$notification, 'nextNotification'=>$nextNotification]);
 
     }
+    public function createNotification(){
+
+    }
+    public function updateNotification(){
+
+    }
+    public function deleteNotification(){
+
+    } 
 }
