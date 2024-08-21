@@ -121,3 +121,13 @@ nav li.current a {
     pointer-events: none; /* クリックできないようにする */
     text-decoration: none; /* アンダーラインを削除する */
 }
+.sercret {
+    text-align: right;
+    padding-top: 30px;
+    /* 他のスタイルがあればここに追加 */
+}
+
+.sercret-link {
+    color: white; /* リンクの色を白に設定 */
+    text-decoration: none; /* アンダーバーを消す */
+}

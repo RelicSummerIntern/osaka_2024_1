@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Notification;
+use Log;
 
 class NotificationsController extends Controller
 {
@@ -57,7 +58,18 @@ class NotificationsController extends Controller
     public function update(){
         return view('editor.update');
     }
-    public function delete(){
-        return view('editor.delete');
+    public function del($id){
+        $notification = Notification::where('notification_id', $id)->firstOrFail();
+        return view('editor.delete',['notification'=>$notification]);
     } 
+    public function destroy($id)
+{
+    $notification = Notification::where('notification_id', $id)->firstOrFail();
+
+
+    $notification->delete();
+
+
+    return view('editor.index');
+} 
 }
