@@ -31,8 +31,28 @@ class NotificationsController extends Controller
         return view('notifications.show', ['prevNotification'=>$prevNotification, 'notification'=>$notification, 'nextNotification'=>$nextNotification]);
 
     }
-    public function create(){
+    public function create(){ // フォームを表示するメソッド
+        // 新たなレコードを作成する
+        // $notifications = Notification::all();  // レコードをすべて取ってくる
+        // return view('editor.create', ['notifications'=>$notifications]);
         return view('editor.create');
+    }
+    public function store_for_create(Request $request){ // フォームから送信されたデータを保存するメソッド
+        // バリデーションを実行してtitleとbodyの入力を確認する
+        $request->validate([
+            'title' => 'required|max:255',
+            'body' => 'required',
+        ]);
+
+        // 新しいお知らせを作成して保存
+        $notification = new Notification;
+        $notification->title = $request->title;
+        $notification->body = $request->body;
+        $notification->save();
+
+        // 以下は、sessionのsuccessキーに対応している。
+        return redirect()->route('notifications.create')->with('success', 'お知らせが投稿されました！');
+        
     }
     public function update(){
         return view('editor.update');
