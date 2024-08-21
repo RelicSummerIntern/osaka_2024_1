@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Administrator\AuthenticatedSessionController;
+use App\Http\Controllers\editor\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\ConfirmablePasswordController;
 use App\Http\Controllers\Auth\EmailVerificationNotificationController;
 use App\Http\Controllers\Auth\EmailVerificationPromptController;
@@ -61,5 +61,5 @@ Route::middleware('auth')->group(function () {
 
 Route::get('edit', function () {
     $notifications = Notification::all();
-    return view('administrator.edit', ['notifications'=>$notifications]);
+    return view('editor.edit', ['notifications'=>$notifications]);
 })->name('edit');

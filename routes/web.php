@@ -48,6 +48,5 @@ Route::get('/shuttered1', [MapController::class, 'shuttered1'])->name('map.shutt
 Route::get('/notifications', [NotificationsController::class, 'index']);
 Route::get('/notifications/{id}', [NotificationsController::class, 'show'])->name('notifications.show');
 
-
 require __DIR__.'/auth.php';
 

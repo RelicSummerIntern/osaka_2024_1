@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Administrator;
+namespace App\Http\Controllers\editor;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
@@ -20,7 +20,7 @@ class AuthenticatedSessionController extends Controller
     public function create(): View
     {
         $editors = Editor::all();
-        return view('administrator.login', ['editors'=>$editors]);
+        return view('editor.login', ['editors'=>$editors]);
     }
 
     public function store(Request $request)

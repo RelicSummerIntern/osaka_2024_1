@@ -16,6 +16,7 @@
                 <a href='http://localhost/notifications/{{ $notification -> notification_id }}'>{{ $notification->title }}</a></li>
                 <!-- 編集ボタン -->
                 <a href='/notifications/{{ $notification->notification_id }}/edit' style="display: inline-block; margin-left: 10px; padding: 5px 10px; border: 1px solid #000; background-color: #f0f0f0; text-decoration: none;">(編集)</a>
+                <a href='/notifications/{{ $notification->notification_id }}/edit' style="display: inline-block; margin-left: 10px; padding: 5px 10px; border: 1px solid #000; background-color: #f0f0f0; text-decoration: none;">(削除)</a>
         @endforeach
     </ul>
 </body>
