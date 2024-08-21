@@ -50,6 +50,8 @@ Route::get('/notifications/{id}', [NotificationsController::class, 'show'])->nam
 // GETリクエストでフォームを表示するルート
 Route::get('/edit/create', [NotificationsController::class, 'create'])->name('notifications.create');
 // POSTリクエストでデータを保存するルート
+Route::post('/edit', [NotificationsController::class, 'index'])->name('edit.index');
+
 Route::post('/edit/store_for_create', [NotificationsController::class, 'store_for_create'])->name('notifications.store_for_create');
 Route::get('/edit/update', [NotificationsController::class, 'update'])->name('notifications.update');
 Route::get('/edit/delete/{id}', [NotificationsController::class, 'del'])->name('notifications.delete');

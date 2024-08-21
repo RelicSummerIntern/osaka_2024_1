@@ -10,6 +10,11 @@
     <h1>お知らせ</h1>
     <!-- 追加ボタン -->
     <!-- <a href="/notifications/create" style="display: inline-block; margin-bottom: 10px; padding: 5px 10px; border: 1px solid #000; background-color: #f0f0f0; text-decoration: none;">(追加)</a> -->
+    @if (session('success'))
+        <div style="color: green; margin-bottom: 20px;">
+            {{ session('success') }}
+        </div>
+    @endif
     <a href="/edit/create">
         <button type="button">追加</button>
     </a>
