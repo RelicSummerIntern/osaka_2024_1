@@ -33,7 +33,8 @@ Route::get('/home', function () {
 })->name('home');
 
 Route::get('/map', [MapController::class, 'index'])->name('map.index');
-
+Route::get('/hamburger', [MapController::class, 'hamburger'])->name('map.hamburger');
+Route::get('/shuttered1', [MapController::class, 'shuttered1'])->name('map.shuttered1');
 // Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
