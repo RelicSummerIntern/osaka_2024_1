@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Notification extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'notification_id';
     // protected $primaryKey = 'notification_id'; // ここでプライマリキーを設定
 }

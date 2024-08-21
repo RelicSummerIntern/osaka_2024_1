@@ -24,7 +24,8 @@
                 </a>
 
                 <!-- 削除ボタン -->
-                <a href="/edit/delete">
+                <a href="/edit/delete/{{ $notification -> notification_id }}'">
+                    
                     <button type="button">削除</button>
                 </a>
             </div>

@@ -21,9 +21,7 @@
         <li>
             <a href="/access">アクセス</a>
         </li>
-        <li>
-            <a href="{{ url('/login') }}">管理者ログイン</a>
-        </li>
+ 
     </ul>
 </nav>
     <div class="content">
