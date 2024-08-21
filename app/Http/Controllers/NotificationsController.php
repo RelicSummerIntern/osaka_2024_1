@@ -52,11 +52,30 @@ class NotificationsController extends Controller
         $notification->save();
 
         // 以下は、sessionのsuccessキーに対応している。
-        return redirect()->route('notifications.create')->with('success', 'お知らせが投稿されました！');
+        return redirect()->route('edit')->with('success', 'お知らせが投稿されました！');
         
     }
-    public function update(){
-        return view('editor.update');
+    public function update(Request $request, $id){
+        $notification = Notification::where('notification_id', $id)->firstOrFail();
+
+        if ($request->isMethod('post') || $request->isMethod('put')) {
+            // バリデーションルールを設定
+            $validated = $request->validate([
+                'title' => 'required|string|max:255',
+                'body' => 'required|string',
+            ]);
+        
+            // モデルの属性を更新
+            $notification->title = $validated['title'];
+            $notification->body = $validated['body'];
+            $notification->save();
+
+            // 更新成功後のリダイレクトやレスポンスを返す
+            return redirect()->route('edit')
+                            ->with('success', 'お知らせが更新されました。');
+            
+        }
+        return view('editor.update',['notification'=>$notification]);
     }
     public function del($id){
         $notification = Notification::where('notification_id', $id)->firstOrFail();

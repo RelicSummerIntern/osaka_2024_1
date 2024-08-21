@@ -9,7 +9,6 @@
     <x-link-on-the-top/>
     <h1>お知らせ</h1>
     <!-- 追加ボタン -->
-    <!-- <a href="/notifications/create" style="display: inline-block; margin-bottom: 10px; padding: 5px 10px; border: 1px solid #000; background-color: #f0f0f0; text-decoration: none;">(追加)</a> -->
     @if (session('success'))
         <div style="color: green; margin-bottom: 20px;">
             {{ session('success') }}
@@ -24,13 +23,12 @@
                 <a href='http://localhost/notifications/{{ $notification -> notification_id }}'>{{ $notification->title }}</a></li>
             <div>
                 <!-- 編集ボタン -->
-                <a href="/edit/update">
+                <a href="/edit/{{ $notification -> notification_id }}">
                     <button type="button">編集</button>
                 </a>
 
                 <!-- 削除ボタン -->
-                <a href="/edit/delete/{{ $notification -> notification_id }}'">
-                    
+                <a href="/edit/delete/{{ $notification -> notification_id }}">
                     <button type="button">削除</button>
                 </a>
             </div>
