@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
-
+use App\Http\Controllers\AccessController;
 use App\Http\Controllers\MapController;
 use App\Http\Controllers\NotificationsController;
 use Illuminate\Support\Facades\Route;
@@ -24,15 +24,10 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/home', function () {
-    return view('home');
-})->name('home');
 
-Route::get('/home', function () {
-    return view('home');
-})->name('home');
 
 Route::get('/map', [MapController::class, 'index'])->name('map.index');
+Route::get('/access', [AccessController::class, 'index'])->name('access.index');
 Route::get('/hamburger', [MapController::class, 'hamburger'])->name('map.hamburger');
 Route::get('/shuttered1', [MapController::class, 'shuttered1'])->name('map.shuttered1');
 // Route::middleware('auth')->group(function () {
