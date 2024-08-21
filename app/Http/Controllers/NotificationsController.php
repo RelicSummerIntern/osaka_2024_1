@@ -32,12 +32,12 @@ class NotificationsController extends Controller
 
     }
     public function create(){
-        return view('notifications.show';
+        return view('editor.create');
     }
     public function update(){
-
+        return view('editor.update');
     }
     public function delete(){
-
+        return view('editor.delete');
     } 
 }
