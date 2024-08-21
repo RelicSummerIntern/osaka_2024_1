@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -20,6 +20,9 @@
         </li>
         <li>
             <a href="#">アクセス</a>
+        </li>
+        <li>
+            <a href="{{ url('/login') }}">管理者ログイン</a>
         </li>
     </ul>
 </nav>
