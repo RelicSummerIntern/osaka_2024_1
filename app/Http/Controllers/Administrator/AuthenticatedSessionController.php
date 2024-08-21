@@ -9,6 +9,8 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
+use App\Models\Editor;
+use Illuminate\Validation\ValidationException;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -17,28 +19,25 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
-        return view('administrator.login');
+        $editors = Editor::all();
+        return view('administrator.login', ['editors'=>$editors]);
     }
 
     public function store(Request $request)
     {
-        // 許可するIDとパスワードのリスト（ここでは例として配列を使用）
-        $allowedCredentials = [
-            ['id' => 'ad1', 'password' => 'p'],
-            ['id' => 'ad2', 'password' => 'p'],
-            // 必要に応じて追加
-        ];
+        // 許可するIDとパスワードのリスト取得
+        $editors = Editor::all();
 
         // リクエストからIDとパスワードを取得
         $inputId = $request->input('id');
         $inputPassword = $request->input('password');
 
         // 許可されたIDとパスワードのチェック
-        foreach ($allowedCredentials as $credentials) {
-            if ($inputId === $credentials['id'] && $inputPassword === $credentials['password']) {
+        foreach ($editors as $editor) {
+            if ($inputId === $editor['editor_id'] && $inputPassword === $editor['password']) {
                 // 認証成功
                 Auth::loginUsingId($inputId);
-                return redirect()->to("http://localhost/notifications/"); // 認証後のリダイレクト先
+                return redirect()->route('edit'); // 認証後のリダイレクト先
             }
         }
 
