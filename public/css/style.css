@@ -1,7 +1,6 @@
 .tytle {
 
     font-size: 60px;
-    margin-top: 100px;
     text-align: center;
     color: #fff;
     text-shadow:
@@ -14,7 +13,22 @@
         0 -2px 0 #000;
  
 }
+.tytle2 {
 
+    font-size: 80px;
+    margin-top: 120px;
+    text-align: center;
+    color: #fff;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px 2px 0 #000,
+        2px -2px 0 #000,
+        -2px -2px 0 #000,
+        2px 0 0 #000,
+        -2px 0 0 #000, 0 2px 0 #000,
+        0 -2px 0 #000;
+ 
+}
 .center_img {
     display: block;
     margin: 0 auto;
@@ -82,23 +96,23 @@ nav li.current a {
 
 /*ここまでがナビゲーションバー*/
 
-.content {
+.content2 {
     display: flex;           /* フレックスボックスに設定 */
     justify-content: center; /* コンテンツを中央揃えにする */
-    gap: 20px;               /* 各ボックスの間にスペースを追加 */
+    gap: 20px;      
+    margin-top: 400px;         /* 各ボックスの間にスペースを追加 */
 }
 
 .box_switch {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: #333;
+    background-color: rgba(248, 244, 244, 1);
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 5px;
     text-align: center;
-    width: 200px;            /* 各ボックスの幅を固定 */
+    width: 400px;            /* 各ボックスの幅を固定 */
     transition: background-color 0.3s ease; /* 背景色の変更にアニメーションを追加 */
 }
 
 .box_switch:hover {
-    background-color: rgba(0, 0, 0, 0.3); /* マウスオーバー時に背景を暗く */
+    background-color: greenyellow; /* マウスオーバー時に背景を暗く */
 }
