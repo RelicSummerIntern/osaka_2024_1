@@ -1,3 +1,4 @@
+<!-- 「お知らせ」のトップ画面 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>

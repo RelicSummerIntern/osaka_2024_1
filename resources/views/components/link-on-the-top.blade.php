@@ -2,7 +2,11 @@
     <div>
         <a href="http://localhost/home/">home</a>
     </div>　
-    <div>マップ</div>　
-    <div>お知らせ</div>　
+    <div>
+        <a href="http://localhost/map/">マップ</a>
+    </div>　
+    <div>
+        <a href="http://localhost/notifications/">お知らせ</a>
+    </div>　
     <div>アクセス</div>　
 </div>
