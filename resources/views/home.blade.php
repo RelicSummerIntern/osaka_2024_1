@@ -31,7 +31,7 @@
                 <a href="{{ url('/notifications') }}">お知らせ</a>
             </li>
             <li>
-                <a href="#">アクセス</a>
+                <a href="/access">アクセス</a>
             </li>
             <li>
                 <a href="{{ url('/login') }}">管理者ログイン</a>
@@ -40,21 +40,24 @@
     </nav>
 
         <!-- <img src="{{ asset('img/arcade.png') }}" alt="商店街の画像" class="center_img">     -->
-        <h1 class="tytle"> ○○商店街<br>
+        <h1 class="tytle2"> ○○商店街<br>
             ジモマップ</h1>
 
 
-            <div class="content">
+    <div class="content2">
+        <a href="{{ url('/map') }}">
         <div class="box_switch">
             <h3>MAP</h3>
             商店街の並びが一目でわかる！<br>
             かわいいイラストマップ
         </div>
+        </a>
 
         <div class="box_switch">
+            <a href="{{ url('/notifications') }}">
             <h3>お知らせ</h3>
             商店街には話題がいっぱい！<br>
-            記事を読んで商店街の魅力をもっと知ろう
+            記事を読んで商店街の魅力をもっと知ろう</a>
         </div>
 
         <div class="box_switch">

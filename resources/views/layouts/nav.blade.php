@@ -19,7 +19,7 @@
             <a href="{{ url('/notifications') }}">お知らせ</a>
         </li>
         <li>
-            <a href="#">アクセス</a>
+            <a href="/access">アクセス</a>
         </li>
         <li>
             <a href="{{ url('/login') }}">管理者ログイン</a>
