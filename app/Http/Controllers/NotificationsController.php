@@ -70,6 +70,6 @@ class NotificationsController extends Controller
     $notification->delete();
 
 
-    return view('editor.index');
+    return redirect()->route('edit.index', ['id' => $id])->with('success', '記事が削除されました');
 } 
 }
