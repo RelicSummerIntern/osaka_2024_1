@@ -1,19 +1,11 @@
-<html>
+@extends('layouts.nav')
 
-<head>
-    <title>zimo_map</title>
-    <style>
-        body {
-            font-size: 16px;
-            color: #999;
-        }
+@section('title', '佐々木バーガー')
+
+@section('content')
 
 
-    </style>
-</head>
-
-<body>
-    <h1>佐々木バーガー</h1>
+    <h1 class='tytle'>佐々木バーガー</h1>
     <p>メニューはこちら</p>
     <ul>
         <li>ハンバーガー</li>
@@ -25,7 +17,4 @@
 皆さんも是非一度食べに来てください！！
 <img src="{{ asset('img/sasaki.jpeg') }}" usemap="#storemap" alt="Store Map" width=1200>
 
-</h2>
-</body>
-
-</html>
+@endsection
