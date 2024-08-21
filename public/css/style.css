@@ -2,7 +2,7 @@
 
     font-size: 60px;
     text-align: center;
-    color: #fff;
+    color: #fd1a1a;
     text-shadow:
         2px 2px 0 #000,
         -2px 2px 0 #000,
@@ -115,4 +115,9 @@ nav li.current a {
 
 .box_switch:hover {
     background-color: greenyellow; /* マウスオーバー時に背景を暗く */
+}
+.disabled-link {
+    color: #cccccc; /* 色を薄くする */
+    pointer-events: none; /* クリックできないようにする */
+    text-decoration: none; /* アンダーラインを削除する */
 }
