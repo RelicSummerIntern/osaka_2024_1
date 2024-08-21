@@ -54,12 +54,16 @@
                 </x-dropdown>
                 @else
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('register')" :active="request()->routeIs('register')" class="text-decoration-none">
+                    <!-- <x-nav-link :href="route('register')" :active="request()->routeIs('register')" class="text-decoration-none">
                         {{ __('Register') }}
                     </x-nav-link>
 
                     <x-nav-link :href="route('login')" :active="request()->routeIs('login')" class="text-decoration-none">
                         {{ __('Login') }}
+                    </x-nav-link> -->
+
+                    <x-nav-link :href="route('login')" :active="request()->routeIs('login')" class="text-decoration-none">
+                        {{ __('管理者ログイン') }}
                     </x-nav-link>
                 </div>
                 @endauth
