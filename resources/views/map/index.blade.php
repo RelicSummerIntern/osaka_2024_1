@@ -2,19 +2,12 @@
 
 <head>
     <title>zimo_map</title>
-    <style>
-        body {
-            font-size: 16px;
-            color: #999;
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body>
-    <h1>○○商店街　簡単MAP</h1>
-    <img src="{{ asset('img/ALLmap.png') }}" usemap="#storemap" alt="Store Map" width=1200>
+    <h1 class="tytle">○○商店街　簡単MAP</h1>
+    <img class="center_img" src="{{ asset('img/ALLmap.png') }}" usemap="#storemap" alt="Store Map" width=1200>
 
 <map name="storemap">
 <area shape="rect" coords="622,76,805,266" href="{{ route('map.hamburger') }}" alt="Hamburger Shop">
