@@ -1,4 +1,9 @@
 <x-guest-layout>
+    <!-- タイトル -->
+    <div class="text-center mb-6">
+        <h2 class="text-2xl font-bold">{{ __('管理者ログイン画面') }}</h2>
+    </div>
+
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -24,7 +29,7 @@
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
-        <!-- Remember Me -->
+        <!-- Remember Me 
         <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
                 <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
@@ -38,7 +43,8 @@
                     {{ __('Forgot your password?') }}
                 </a>
             @endif
-
+        -->
+        <div class="block mt-4">
             <x-primary-button class="ml-3">
                 {{ __('Log in') }}
             </x-primary-button>
