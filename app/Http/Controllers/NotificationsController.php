@@ -31,13 +31,13 @@ class NotificationsController extends Controller
         return view('notifications.show', ['prevNotification'=>$prevNotification, 'notification'=>$notification, 'nextNotification'=>$nextNotification]);
 
     }
-    public function createNotification(){
+    public function create(){
+        return view('notifications.show';
+    }
+    public function update(){
 
     }
-    public function updateNotification(){
-
-    }
-    public function deleteNotification(){
+    public function delete(){
 
     } 
 }

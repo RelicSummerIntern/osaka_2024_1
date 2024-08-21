@@ -53,6 +53,10 @@ Route::get('/shuttered1', [MapController::class, 'shuttered1'])->name('map.shutt
 Route::get('/notifications', [NotificationsController::class, 'index']);
 Route::get('/notifications/{id}', [NotificationsController::class, 'show'])->name('notifications.show');
 
+Route::get('/edit/create', [NotificationsController::class, 'create'])->name('notification.create');
+Route::get('/edit/update', [NotificationsController::class, 'update'])->name('notification.update');
+Route::get('/edit/delete', [NotificationsController::class, 'delete'])->name('notification.delete');
+
 
 require __DIR__.'/auth.php';
 
