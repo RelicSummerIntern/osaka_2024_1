@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
 
 use App\Http\Controllers\MapController;
+use App\Http\Controllers\NotificationsController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -48,6 +49,10 @@ Route::get('/shuttered1', [MapController::class, 'shuttered1'])->name('map.shutt
 
     Route::get('/myposts', [PostController::class, 'myPosts'])->name('myposts');
 // });
+
+Route::get('/notifications', [NotificationsController::class, 'index']);
+Route::get('/notifications/{id}', [NotificationsController::class, 'show']);
+
 
 require __DIR__.'/auth.php';
 
