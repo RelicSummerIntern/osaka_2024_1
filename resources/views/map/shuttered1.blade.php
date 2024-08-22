@@ -1,25 +1,79 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-    <title>zimo_map</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空き店舗 - 詳細情報</title>
     <style>
         body {
-            font-size: 16px;
-            color: #999;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
         }
-
-
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        .contact-info {
+            background: #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .contact-info h2 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .map-container {
+            text-align: center;
+        }
+        .map-container img {
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
-
 <body>
-    <h1>空き店舗</h1>
-    <p>元中華料理屋なので、キッチン、シンク等完備。
-<br>内装のリフォームだけで飲食店を始められます。
-    </p>
-    <p>ご相談はこちら(××不動産)</p>
-    <img src="{{ asset('img/kittin.jpg') }}" usemap="#storemap" alt="Store Map" width=240>
-
+    <div class="container">
+        <h1>空き店舗のお知らせ</h1>
+        <p>元中華料理屋なので、キッチン、シンク等完備。<br>内装のリフォームだけで飲食店を始められます。</p>
+        
+        <div class="map-container">
+            <img src="{{ asset('img/kittin.jpg') }}" usemap="#storemap" alt="Store Map" width="400">
+        </div>
+        
+        <div class="contact-info">
+            <h2>ご相談はこちら</h2>
+            <p><strong>連絡先:</strong> 080-1234-5678</p>
+            <p><strong>メール:</strong> <a href="mailto:info@example.com">info@example.com</a></p>
+            <p><strong>担当:</strong> ×× 不動産</p>
+        </div>
+    </div>
 </body>
-
 </html>
