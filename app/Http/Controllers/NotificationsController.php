@@ -52,6 +52,7 @@ class NotificationsController extends Controller
         $notification->save();
 
         // 以下は、sessionのsuccessキーに対応している。
+        // return redirect()->route('notifications.create')->with('success', 'お知らせが投稿されました！');
         return redirect()->route('edit')->with('success', 'お知らせが投稿されました！');
         
     }
