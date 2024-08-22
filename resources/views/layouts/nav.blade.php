@@ -10,7 +10,7 @@
     
 .page {
     background-image: url('{{ asset('img/arcade.png') }}');
-        background-size: cover;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100%;
