@@ -9,13 +9,21 @@
         <div class="map-bar"></div>
         <div style="font-size: 1px">　</div>
     </div>
-    <br>
+    <h3 style="text-align: center;">
+        地元の皆さんにも愛される西新道錦会商店街の名物！<br>
+        皆さんも是非一度買いに来てください！！<br>
+    </h3>
+    
+    <div class="map-bar"></div>
     <div class="scheduleAndPicture">
+    <h2 style="text-align: center; background-color: #F5F0E6;">
+        アクセス
+    </h2>
         <!-- <div class="schedule" style="font-size: 20px"> -->
         <div style="font-size: 20px;">
             0123-45-6789<br>
-            営業時間：○○<br>
-            定休日：○○
+            営業時間：9:00～18:00<br>
+            定休日：日曜日
         </div>
         <div class="scheduleAndPicture_item">
             <img src="{{ asset('img/murase_real.jpg') }}" usemap="#storemap" alt="Store Map" style="height: 50vh; width: auto;">
@@ -23,31 +31,26 @@
         
     </div>
     <div class="map-bar"></div>
-    <h3 style="text-align: center;">
-        地元の皆さんにも愛される西新道錦会商店街の名物！<br>
-        皆さんも是非一度食べに来てください！！<br>
-    </h3>
-    <div class="map-bar"></div>
 
-    <h2 style="text-align: center;">メニュー（抜粋）はこちら</h2>
-    <h3 style="text-align: center;">揚げもん</h3>
-    <ul style="text-align: center;">
-        <li style="text-align: center">コロッケ：60円</li>
-        <li>ミンチカツ：130円</li>
-        <li>ハムカツ：120円</li>
-        <!-- <li>ウィンナーカツ：120円</li>
-        <li>クリームコロッケ：120円</li> -->
-        <li>串カツ：130円</li>
-        <!-- <li>ロースとんかつ：320円</li>
-        <li>ヘレカツ：120円</li>
-        <li>微うかつ：100円</li> -->
-    </ul>
-    <h3 style="text-align: center;">肉</h3>
-    <ul style="text-align: center;">
-        <li>とんかつ</li>
-        <li>合挽ミンチ</li>
-        <li>ロースうす切</li>
-    </ul>
+    <h2 style="text-align: center; background-color: #F5F0E6;">
+        メニュー（抜粋）
+    </h2>
+    <div class="menu-box">
+        <h3 style="text-align: center;">揚げもん</h3>
+        <ul>
+            <li style="text-align: left">コロッケ</li>
+            <li style="text-align: left">ミンチカツ</li>
+            <li style="text-align: left">ハムカツ</li>
+            <li style="text-align: left">串カツ</li>
+        </ul>
+        <h3 style="text-align: center;">肉</h3>
+        <ul>
+            <li style="text-align: left">とんかつ</li>
+            <li style="text-align: left">合挽ミンチ</li>
+            <li style="text-align: left">ロースうす切</li>
+        </ul>
+    </div>
+
 
 
 
