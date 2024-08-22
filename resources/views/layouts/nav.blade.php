@@ -6,7 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Default Title')</title>
 </head>
-<body>
+<style>
+    
+.page {
+    background-image: url('{{ asset('img/arcade.png') }}');
+        background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-attachment: fixed; /* 背景を固定 */
+    padding: 0; /* 余白をなくす */
+    margin: 0; /* 余白をなくす */
+    text-align: center; /* テキストを中央揃え */
+}
+</style>
+<body class="page">
+<div id="tooltip" style="position: absolute; display: none;"></div>
+
 <nav>
     <ul>
         <li class="{{ Request::is('/') ? 'current' : '' }}">
@@ -18,8 +34,8 @@
         <li class="{{ Request::is('notifications') ? 'current' : '' }}">
             <a href="{{ url('/notifications') }}">お知らせ</a>
         </li>
-        <li>
-            <a href="/access">アクセス</a>
+        <li class="{{ Request::is('access') ? 'current' : '' }}">
+            <a href="{{ url('/access') }}">アクセス</a>
         </li>
  
     </ul>
@@ -27,5 +43,7 @@
     <div class="content">
         @yield('content')
     </div>
+      <!-- JavaScriptファイルの読み込み -->
+      <script src="{{ asset('js/custom.js') }}"></script>
 </body>
 </html>

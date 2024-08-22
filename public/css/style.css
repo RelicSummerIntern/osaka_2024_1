@@ -53,7 +53,7 @@ text-shadow:
 }
 
 nav {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(10, 240, 248, 0.8);
     /* 背景色を白に設定し、少し透過 */
     margin-bottom: 60px;
     padding: 10px 0;
@@ -63,13 +63,24 @@ nav {
     /* 固定した場合は幅を100%に設定して、画面全体に広がるように */
     top: 0;
     /* 画面の上部に配置 */
-    z-index: 10;
+    z-index: 1000;
     /* 背景画像より前面に表示 */
+}
+
+.page {
+    padding: 0; /* 余白をなくす */
+    margin: 0; /* 余白をなくす */
+
 }
 
 .content {
     padding-top: 80px;
-    /* ナビゲーションバーの高さ分だけコンテンツを下げる */
+    background-color: white; /* 背景を白に設定 */
+    margin: 0 auto; /* 中央揃え */
+    display: inline-block; /* 幅を必要なだけに制限 */
+    width: 80%; /* 内容の幅を設定 */
+    max-width: 1200px; /* 最大幅を設定 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 影を追加 */
 }
 
 nav ul {
@@ -216,30 +227,18 @@ a:visited {
     margin-top: 10px;
   }
   }
-  
-  .tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
+  #tooltip {
     background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 14px;
+    z-index: 10;
 }
 
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
+
+.left-align {
+    text-align: left; /* 左揃えに設定 */
+    margin: 0 auto;   /* 中央のコンテナ内に配置するためのマージン設定 */
+    width: 100%;      /* コンテンツを全幅に広げる */
 }
