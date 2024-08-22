@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>西新道錦会商店街　ジモマップ</title>
     <style>
-.home {
-    background-image: url('{{ asset('img/arcade.png') }}');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    background-attachment: fixed; /* 背景を固定 */
-}
+        .home {
+            background-image: url('{{ asset('img/arcade.png') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100%;
+            background-attachment: fixed; /* 背景を固定 */
+        }
 
     </style>
 </head>

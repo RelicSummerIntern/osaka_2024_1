@@ -3,13 +3,15 @@
 @section('title', 'むら瀬')
 
 @section('content')
-
-    <div class="red-band"></div>
-    <h1 class='tytle'>むら瀬</h1>
-    <div class="red-band"></div>
+    <div style="background-color: #ffffff;">
+        <div style="font-size: 1px">　</div>
+        <h1 class='tytle'>むら瀬</h1>
+        <div class="map-bar"></div>
+        <div style="font-size: 1px">　</div>
+    </div>
     <br>
     <div class="scheduleAndPicture">
-        <div class="scheduleAndPicture_item" style="font-size: 2vw">
+        <div class="schedule" style="font-size: 20px">
             0123-45-6789<br>
             営業時間：○○<br>
             定休日：○○
@@ -19,13 +21,13 @@
         </div>
         
     </div>
-    <hr>
+    <div class="map-bar"></div>
     <h3 style="text-align: center;">
         地元の皆さんにも愛されるOO商店街の名物！<br>
         皆さんも是非一度食べに来てください！！<br>
         毎週土曜日は特売日です！
     </h3>
-    <hr>
+    <div class="map-bar"></div>
 
     <h2 style="text-align: center;">メニュー（抜粋）はこちら</h2>
     <h3 style="text-align: center;">揚げもん</h3>
