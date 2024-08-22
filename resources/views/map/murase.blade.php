@@ -11,7 +11,8 @@
     </div>
     <br>
     <div class="scheduleAndPicture">
-        <div class="schedule" style="font-size: 20px">
+        <!-- <div class="schedule" style="font-size: 20px"> -->
+        <div style="font-size: 20px;">
             0123-45-6789<br>
             営業時間：○○<br>
             定休日：○○
@@ -23,16 +24,15 @@
     </div>
     <div class="map-bar"></div>
     <h3 style="text-align: center;">
-        地元の皆さんにも愛されるOO商店街の名物！<br>
+        地元の皆さんにも愛される西新道錦会商店街の名物！<br>
         皆さんも是非一度食べに来てください！！<br>
-        毎週土曜日は特売日です！
     </h3>
     <div class="map-bar"></div>
 
     <h2 style="text-align: center;">メニュー（抜粋）はこちら</h2>
     <h3 style="text-align: center;">揚げもん</h3>
     <ul style="text-align: center;">
-        <li>コロッケ：60円</li>
+        <li style="text-align: center">コロッケ：60円</li>
         <li>ミンチカツ：130円</li>
         <li>ハムカツ：120円</li>
         <!-- <li>ウィンナーカツ：120円</li>
