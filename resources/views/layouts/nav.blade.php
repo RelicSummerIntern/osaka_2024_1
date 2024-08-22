@@ -9,7 +9,7 @@
 <style>
     
 .page {
-    background-image: url("{{ asset('img/arcade.png') }}");
+    background-image: url("{{ asset('img/kyoto.png') }}");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,6 +18,9 @@
     padding: 0; /* 余白をなくす */
     margin: 0; /* 余白をなくす */
     text-align: center; /* テキストを中央揃え */
+
+    background-color: rgba(255, 255, 255, 0.7); /* 半透明の白を背景色として設定 */
+    background-blend-mode: lighten; /* 背景画像と背景色をブレンド */
 }
 </style>
 <body class="page">
