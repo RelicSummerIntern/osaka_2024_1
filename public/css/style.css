@@ -243,3 +243,30 @@ a:visited {
     visibility: visible;
     opacity: 1;
 }
+
+/* murase.blade.phpで使用 */
+
+.red-band {
+    background-color: rgb(255, 72, 72);
+    /* color: white; テキストが見やすくなるように色を白に変更 */
+    padding: 3px; /* パディングで帯の幅を調整 */
+    /* box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.8),*/ /* 下側の影 */
+    /*            0 -2px 3px -1px rgba(0, 0, 0, 0.8);*/ /* 上側の影 */
+    border-top: 2px solid black; /* 上部の黒い縁 */
+    border-bottom: 2px solid black; /* 下部の黒い縁 */
+
+}
+
+scheduleAndPicture {
+    display: flex;
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center;     /* 垂直方向の中央揃え */
+    height: 50vh;           /* コンテナの高さを画面全体に設定 */
+}
+.scheduleAndPicture_item {
+    flex: 1; /* 各要素が親要素の幅を等しく分割 */
+    padding: 10px;
+    box-sizing: border-box; /* パディングを含めて幅を計算 */
+    text-align: center;
+} */
+

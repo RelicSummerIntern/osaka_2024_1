@@ -20,6 +20,11 @@ class MapController extends Controller
     {
         return view('map.shuttered1'); 
     }
+
+    public function murase()
+    {
+        return view('map.murase');
+    }
     
 }
 
