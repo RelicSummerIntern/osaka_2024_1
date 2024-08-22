@@ -11,42 +11,47 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use App\Models\Editor;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Session;
 
 class AuthenticatedSessionController extends Controller
 {
     /**
      * Display the login view.
      */
-    public function create(): View
+    public function create(): View|RedirectResponse
     {
+        if (Session::get('login_flag') === true) {
+            return redirect()->to('/edit');
+        }
         $editors = Editor::all();
         return view('editor.login', ['editors'=>$editors]);
     }
 
     public function store(Request $request)
     {
-        // 許可するIDとパスワードのリスト取得
-        $editors = Editor::all();
-
         // リクエストからIDとパスワードを取得
         $inputId = $request->input('id');
         $inputPassword = $request->input('password');
 
         // 許可されたIDとパスワードのチェック
-        foreach ($editors as $editor) {
-            if ($inputId === $editor['editor_id'] && $inputPassword === $editor['password']) {
-                // 認証成功
-                Auth::loginUsingId($inputId);
-                return redirect()->route('edit'); // 認証後のリダイレクト先
-            }
-        }
+        $editor = Editor::where('editor_id', $inputId)->first();
 
-        // 認証失敗
-        throw ValidationException::withMessages([
-            'id' => __('The provided credentials are incorrect.'),
-        ]);
+        if ($editor && $inputPassword === $editor->password) {
+            // 認証成功。フラグ生成
+            Session::put('login_flag', true);
+
+            // 成功メッセージを設定してリダイレクト
+            return redirect()->route('edit')->with('success', '管理者ログインしたで');
+        }
     }
-    
+
+    public function destroy(Request $request)
+    {
+        Session::put('login_flag', false);
+
+        return redirect()->to('/');
+    }
     /**
      * Handle an incoming authentication request.
      */
