@@ -20,6 +20,8 @@
 </head>
 
 <body class='home'>
+<div id="tooltip" style="position: absolute; display: none;"></div>
+
     <nav>
         <ul>
             <li class="{{ Request::is('/') ? 'current' : '' }}">
@@ -38,7 +40,8 @@
 <p class="invite">  
     日本には
     地域住民に愛される商店街がいっぱい存在！<br>
-    そんな商店街の魅力をそこのあなたにも大紹介！
+    そんな商店街の魅力をそこのあなたにも大紹介！<br>
+    気になる商店街を選んで下のボタンをクリック！！
 </p>
 
 <div class="button-container">
@@ -46,13 +49,13 @@
 </div>
 <div class="slideshow-container">
     <div class="slide">
-        <img src="{{ asset('img/hata.jpg') }}" alt="Image 0" class="slide-image">
+        <img src="{{ asset('img/hata.jpg') }}" alt="Image 0" class="slide-image" data-tooltip="大阪～旗の台東口通り商店会～">
     </div>
     <div class="slide">
-        <img src="{{ asset('img/nisi.jpg') }}" alt="Image 2" class="slide-image">
+        <img src="{{ asset('img/DSC.JPG') }}" alt="Image 2" class="slide-image" data-tooltip="京都～西新道錦会商店街～">
     </div>
     <div class="slide">
-        <img src="{{ asset('img/ooita.jpg') }}" alt="Image 3" class="slide-image">
+        <img src="{{ asset('img/5.jpg') }}" alt="Image 3" class="slide-image" data-tooltip="大分～新町通り商店街～">
     </div>
 
     <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
