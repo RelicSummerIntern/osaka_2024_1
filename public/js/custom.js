@@ -53,7 +53,7 @@ function showSlides(n) {
 
     // リンク先の変更
     const urls = [
-        "/com",
+        "/home2",
         "/home",
         "/com"
     ];
