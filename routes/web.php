@@ -67,8 +67,7 @@ Route::middleware([Auth_editor::class])->group(function () {
     Route::post('/edit/store_for_create', [NotificationsController::class, 'store_for_create'])->name('notifications.store_for_create');
     Route::get('/edit/{id}', [NotificationsController::class, 'update'])->name('notifications.edit');
     Route::post('/edit/update/{id}', [NotificationsController::class, 'update'])->name('notifications.update');
-    Route::get('/edit/delete/{id}', [NotificationsController::class, 'del'])->name('notifications.delete');
-    Route::post('/editor/delete/{id}', [NotificationsController::class, 'destroy'])->name('notifications.destroy');
+    Route::get('/edit/delete/{id}', [NotificationsController::class, 'delete'])->name('notifications.delete');
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 });
 
