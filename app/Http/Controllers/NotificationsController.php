@@ -78,12 +78,8 @@ class NotificationsController extends Controller
         }
         return view('editor.update',['notification'=>$notification]);
     }
-    public function del($id){
-        $notification = Notification::where('notification_id', $id)->firstOrFail();
-        return view('editor.delete',['notification'=>$notification]);
-    } 
-    public function destroy($id)
-{
+    public function delete($id)
+    {
     $notification = Notification::where('notification_id', $id)->firstOrFail();
 
 
@@ -91,5 +87,5 @@ class NotificationsController extends Controller
 
 
     return redirect()->route('edit')->with('success', '記事が削除されました');
-} 
+    } 
 }
