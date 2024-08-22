@@ -5,9 +5,12 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\AccessController;
 use App\Http\Controllers\MapController;
 use App\Http\Controllers\NotificationsController;
+use App\Http\Controllers\EditorsController;
+use App\Http\Controllers\editor\AuthenticatedSessionController;
+use App\Http\Middleware\Auth_editor;
 use Illuminate\Support\Facades\Route;
-
-
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +24,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('top');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
+Route::get('/com', function () {
+    return view('coming');
+});
 
 
 Route::get('/map', [MapController::class, 'index'])->name('map.index');
@@ -48,16 +57,20 @@ Route::get('/map/murase', [Mapcontroller::class, 'murase'])->name('map.murase');
 
 Route::get('/notifications', [NotificationsController::class, 'index'])->name('notifications.index');
 Route::get('/notifications/{id}', [NotificationsController::class, 'show'])->name('notifications.show');
-// GETリクエストでフォームを表示するルート
-Route::get('/edit/create', [NotificationsController::class, 'create'])->name('notifications.create');
-// POSTリクエストでデータを保存するルート
-Route::post('/edit', [NotificationsController::class, 'index'])->name('edit.index');
 
-Route::post('/edit/store_for_create', [NotificationsController::class, 'store_for_create'])->name('notifications.store_for_create');
-Route::get('/edit/{id}', [NotificationsController::class, 'update'])->name('notifications.edit');
-Route::post('/edit/update/{id}', [NotificationsController::class, 'update'])->name('notifications.update');
-Route::get('/edit/delete/{id}', [NotificationsController::class, 'del'])->name('notifications.delete');
-Route::post('/editor/delete/{id}', [NotificationsController::class, 'destroy'])->name('notifications.destroy');
+Route::middleware([Auth_editor::class])->group(function () {
+    Route::get('/select', [EditorsController::class, 'select_page'])->name('select');
+    Route::get('/edit', [EditorsController::class, 'edit_page'])->name('edit');
+
+    Route::get('/edit/create', [NotificationsController::class, 'create'])->name('notifications.create');
+    Route::get('/edit/preview/{id}', [EditorsController::class, 'show'])->name('edit.preview');
+    Route::post('/edit/store_for_create', [NotificationsController::class, 'store_for_create'])->name('notifications.store_for_create');
+    Route::get('/edit/{id}', [NotificationsController::class, 'update'])->name('notifications.edit');
+    Route::post('/edit/update/{id}', [NotificationsController::class, 'update'])->name('notifications.update');
+    Route::get('/edit/delete/{id}', [NotificationsController::class, 'del'])->name('notifications.delete');
+    Route::post('/editor/delete/{id}', [NotificationsController::class, 'destroy'])->name('notifications.destroy');
+    Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
+});
 
 
 require __DIR__.'/auth.php';
