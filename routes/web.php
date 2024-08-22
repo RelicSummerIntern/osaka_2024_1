@@ -59,7 +59,9 @@ Route::get('/notifications', [NotificationsController::class, 'index'])->name('n
 Route::get('/notifications/{id}', [NotificationsController::class, 'show'])->name('notifications.show');
 
 Route::middleware([Auth_editor::class])->group(function () {
+    Route::get('/select', [EditorsController::class, 'select_page'])->name('select');
     Route::get('/edit', [EditorsController::class, 'edit_page'])->name('edit');
+
     Route::get('/edit/create', [NotificationsController::class, 'create'])->name('notifications.create');
     Route::get('/edit/preview/{id}', [EditorsController::class, 'show'])->name('edit.preview');
     Route::post('/edit/store_for_create', [NotificationsController::class, 'store_for_create'])->name('notifications.store_for_create');

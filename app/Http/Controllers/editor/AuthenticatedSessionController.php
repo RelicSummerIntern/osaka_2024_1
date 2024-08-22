@@ -42,7 +42,7 @@ class AuthenticatedSessionController extends Controller
             Session::put('login_flag', true);
 
             // 成功メッセージを設定してリダイレクト
-            return redirect()->route('edit')->with('success', '管理者ログインしたで');
+            return redirect()->route('select')->with('success', '管理者ログインしたで');
         }
     }
 

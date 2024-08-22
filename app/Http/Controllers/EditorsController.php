@@ -18,5 +18,8 @@ class EditorsController extends Controller
     public function edit_page(){
         $notifications = Notification::all();
         return view('editor.edit', ['notifications'=>$notifications]);
+    }       
+    public function select_page(){
+        return view('editor.select', );
 }
 }
