@@ -1,6 +1,7 @@
 .tytle {
     /* background-color: #F5F0E6; */
     font-size: 40px;
+    padding-top: 60px;
     text-align: center;
     /* color: #fd1a1a; */
     color: #C2A366;
@@ -17,7 +18,7 @@
 .tytle2 {
 
     font-size: 100px;
-    padding-top: 0px;
+    padding-top: 40px;
     text-align: center;
     color: #fff;
     text-shadow:
@@ -38,14 +39,15 @@ nav a{
 font-size: 40px;
 padding-top: 0px;
 text-align: center;
+color: white;
 text-shadow:
-        2px 2px 0 #fff,
-        -2px 2px 0 #fff,
-        2px -2px 0 #fff,
-        -2px -2px 0 #fff,
-        2px 0 0 #fff,
-        -2px 0 0 #fff, 0 2px 0 #fff,
-        0 -2px 0 #fff;
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    2px 0 0 #000,
+    -2px 0 0 #000, 0 2px 0 #000,
+    0 -2px 0 #000;
 }
 .center_img {
     display: block;
@@ -76,7 +78,7 @@ nav {
 }
 
 .content {
-    padding-top: 80px;
+    padding-top: 0px;
     background-color: white; /* 背景を白に設定 */
     margin: 0 auto; /* 中央揃え */
     display: inline-block; /* 幅を必要なだけに制限 */
@@ -380,29 +382,6 @@ button {
     width: 23%; /* ボックスの幅 */
     background-color: #f9f9f9; /* ボックスの背景色 */
 }
-.background-container {
-    position: relative;
-    width: 100%;
-    height: 500px; /* 必要に応じて高さを調整 */
-    background-image: url('path_to_your_background_image.jpg');
-    background-size: cover; /* 背景画像をコンテナ全体に表示 */
-    background-position: center;
-}
-.background-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* 白の半透明オーバーレイ */
-    z-index: 1; /* オーバーレイが上に表示されるようにする */
-}
-.content {
-    position: relative;
-    z-index: 2; /* コンテンツをオーバーレイの上に表示 */
-    text-align: center;
-    padding: 20px;
-}
+
 
 /* ここまでむら瀬ページ */

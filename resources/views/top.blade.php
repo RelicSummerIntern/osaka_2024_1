@@ -8,7 +8,7 @@
     <title>地域商店街応援サイト<br>ジモマップ</title>
     <style>
 .home {
-    background-image: url('{{ asset('img/arcade.png') }}');
+    background-image: url("{{ asset('img/arcade.png') }}");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
