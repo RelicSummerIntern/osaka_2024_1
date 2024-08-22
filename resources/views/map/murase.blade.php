@@ -15,7 +15,8 @@
     </h3>
     
     <div class="map-bar"></div>
-    <div class="scheduleAndPicture">
+
+    <div >
     <h2 style="text-align: center; background-color: #F5F0E6;">
         アクセス
     </h2>

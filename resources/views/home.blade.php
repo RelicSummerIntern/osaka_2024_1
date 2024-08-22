@@ -8,7 +8,7 @@
     <title>西新道錦会商店街</title>
     <style>
         .home {
-            background-image: url("{{ asset('img/arcade.png') }}");
+            background-image: url("{{ asset('img/kyoto.png') }}");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
