@@ -21,9 +21,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('top');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
+Route::get('/com', function () {
+    return view('coming');
+});
 
 
 Route::get('/map', [MapController::class, 'index'])->name('map.index');
