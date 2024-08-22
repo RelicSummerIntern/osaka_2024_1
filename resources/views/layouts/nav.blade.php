@@ -7,6 +7,8 @@
     <title>@yield('title', 'Default Title')</title>
 </head>
 <body>
+<div id="tooltip" style="position: absolute; display: none;"></div>
+
 <nav>
     <ul>
         <li class="{{ Request::is('/') ? 'current' : '' }}">
@@ -27,5 +29,7 @@
     <div class="content">
         @yield('content')
     </div>
+      <!-- JavaScriptファイルの読み込み -->
+      <script src="{{ asset('js/custom.js') }}"></script>
 </body>
 </html>
