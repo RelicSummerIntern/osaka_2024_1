@@ -152,6 +152,7 @@ nav li.current a {
     color: #cccccc; /* 色を薄くする */
     pointer-events: none; /* クリックできないようにする */
     text-decoration: none; /* アンダーラインを削除する */
+    font-size: 16px;
 }
 
 .box_switch h3{
@@ -381,6 +382,29 @@ button {
     margin: 20px auto; /* ボックスの外側の余白（上下20px、左右自動で中央揃え） */
     width: 23%; /* ボックスの幅 */
     background-color: #f9f9f9; /* ボックスの背景色 */
+}
+
+.custom-button {
+    display: inline-block; /* インラインブロック要素にする */
+    background-color: #F5F0E6; /* 背景色 */
+    color: white; /* テキストの色 */
+    padding: 15px 32px; /* パディング（リンクの内側の余白） */
+    text-align: center; /* テキストを中央揃え */
+    text-decoration: none; /* テキストの下線を削除 */
+    font-size: 16px; /* フォントサイズ */
+    margin: 4px 2px; /* 外側の余白 */
+    cursor: pointer; /* カーソルをポインターにする */
+    /* border: none; */ /* ボーダーを削除 */
+    border-radius: 4px; /* ボタンの角を丸くする */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* 影を追加 */
+    transition: box-shadow 0.3s ease; /* 影のトランジション効果 */
+}
+
+.custom-button:hover {
+    background-color: #F5F0E6; /* ホバー時の背景色 */
+    color: black; /* マウスオーバー時のテキストの色を保持 */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3); /* ホバー時の影を強調 */
+    text-decoration: none; /* テキストの下線を削除 */
 }
 
 
