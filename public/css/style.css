@@ -244,8 +244,7 @@ a:visited {
     opacity: 1;
 }
 
-/* murase.blade.phpで使用 */
-
+/* 山名が追加 */
 .red-band {
     background-color: rgb(255, 72, 72);
     /* color: white; テキストが見やすくなるように色を白に変更 */
@@ -256,7 +255,6 @@ a:visited {
     border-bottom: 2px solid black; /* 下部の黒い縁 */
 
 }
-
 scheduleAndPicture {
     display: flex;
     justify-content: center; /* 水平方向の中央揃え */
@@ -268,5 +266,5 @@ scheduleAndPicture {
     padding: 10px;
     box-sizing: border-box; /* パディングを含めて幅を計算 */
     text-align: center;
-} */
+} 
 
