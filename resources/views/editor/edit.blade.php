@@ -94,7 +94,7 @@
             background-color: #bfbfbf; /* ホバー時のさらに薄い灰色 */
         }
         .button-group .delete-button {
-            background-color: #d6d6d6; 
+            background-color: #d6d6d6;
             color: #dc3545; /* 赤色 */
         }
         .button-group .delete-button:hover {
@@ -108,7 +108,7 @@
         <div class="header">
             <h1>お知らせ編集画面</h1>
             <!-- ログアウトボタン -->
-            <form action="{{ route('logout') }}" method="POST" class="logout-form">
+            <form action="{{ route('logout') }}" method="POST" class="logout-form" id="logout-form">
                 @csrf
                 <button type="submit">ログアウト</button>
             </form>
@@ -139,7 +139,7 @@
                             <button type="button">編集</button>
                         </a>
                         <!-- 削除ボタン -->
-                        <a href="/edit/delete/{{ $notification->notification_id }}">
+                        <a href="/edit/delete/{{ $notification->notification_id }}" class="delete-link">
                             <button type="button" class="delete-button">削除</button>
                         </a>
                     </div>
@@ -147,5 +147,23 @@
             @endforeach
         </ul>
     </div>
+
+    <script>
+        // 削除ボタンがクリックされたときの確認ダイアログ
+        document.querySelectorAll('.delete-link').forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                if (!confirm('本当に削除しますか？')) {
+                    event.preventDefault(); // リンクのデフォルトの動作をキャンセル
+                }
+            });
+        });
+
+        // ログアウトボタンがクリックされたときの確認ダイアログ
+        document.getElementById('logout-form').addEventListener('submit', function(event) {
+            if (!confirm('本当にログアウトしますか？')) {
+                event.preventDefault(); // フォームのデフォルトの動作をキャンセル
+            }
+        });
+    </script>
 </body>
 </html>
