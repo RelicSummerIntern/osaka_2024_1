@@ -17,7 +17,7 @@
 }
 .tytle2 {
 
-    font-size: 100px;
+    font-size: 90px;
     padding-top: 40px;
     text-align: center;
     color: #fff;
@@ -57,8 +57,9 @@ text-shadow:
 
 nav {
     /* background-color: rgba(10, 240, 248, 0.8); */
-    background-color:  #F5F0E6;
+    background-color:  #C2A366;
     /* 背景色を白に設定し、少し透過 */
+    
     margin-bottom: 60px;
     padding: 10px 0;
     position: fixed;
@@ -99,11 +100,10 @@ nav li {
     display: table-cell;
     min-width: 50px;
 }
-
 nav a {
     display: block;
     width: 100%;
-    text-decoration: none;
+    text-decoration: none; 
     color: #555;
     padding-bottom: 5px;
 }
@@ -113,17 +113,12 @@ nav li.current {
 }
 
 nav li:hover {
-    color: #E7DA66;
-    border-bottom: 3px solid #F0E475;
-}
-
-nav li.current {
-    border-bottom: 3px solid #92D050;
-    color: #92D050;
+    color: #555;
+    border-bottom: 3px solid #000000; 
 }
 
 nav li.current a {
-    color: #92D050;
+    color: #F5F0E6;
 }
 
 /*ここまでがナビゲーションバー*/
@@ -269,16 +264,17 @@ a:visited {
     font-size: 20px; /* 本文用のフォントサイズ */
 }
 /* 全体のリンクのスタイル */
-a {
-    color: #007bff; /* デフォルトのリンクの色 */
+
+a.notirink {
+    color: #000000; /* デフォルトのリンクの色 */
     text-decoration: none; /* デフォルトで下線なし */
     font-size: 16px; /* フォントサイズを設定 */
 }
 
 /* マウスオーバー時のリンクのスタイル */
-a:hover {
-    color: #0056b3; /* 青色の濃い色 */
-    text-decoration: underline; /* 下線を表示 */
+a.notirink:hover {
+    color: #0056b3; 
+    text-decoration: underline;
 }
 
 .btn {

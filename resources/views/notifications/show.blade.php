@@ -14,7 +14,7 @@
     <div class="container">
         <div class="body">
             @if($prevNotification)
-                <a href="{{ route('notifications.show', ['id'=> $prevNotification->notification_id]) }}">
+                <a  class="notirink" href="{{ route('notifications.show', ['id'=> $prevNotification->notification_id]) }}">
                     前の記事
                 </a>
             @else
@@ -24,12 +24,12 @@
 
         <!-- 一覧に戻るボタン -->
         <div class="body">
-            <a href="{{ route('notifications.index') }}">一覧に戻る</a>
+            <a href="{{ route('notifications.index') }}" class="notirink">一覧に戻る</a>
         </div>
 
         <div class="body">
             @if($nextNotification)
-                <a href="{{ route('notifications.show', ['id'=> $nextNotification->notification_id]) }}">
+                <a  class="notirink" href="{{ route('notifications.show', ['id'=> $nextNotification->notification_id]) }}">
                     次の記事
                 </a>
             @else
