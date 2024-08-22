@@ -42,28 +42,33 @@
         <!-- <img src="{{ asset('img/arcade.png') }}" alt="商店街の画像" class="center_img">     -->
         <h1 class="tytle2"> ○○商店街<br>
             ジモマップ</h1>
-
+<p class="invite">
+    地域に根差して早100年。地元民に愛され続ける老舗揃いの商店街！<br>
+    詳しくは下のページから！！
+</p>
 
     <div class="content2">
         <a href="{{ url('/map') }}">
         <div class="box_switch">
             <h3>MAP</h3>
-            商店街の並びが一目でわかる！<br>
-            かわいいイラストマップ
+            <p>商店街の並びが一目でわかる！<br>
+            かわいいイラストマップ</p>
         </div>
         </a>
 
         <div class="box_switch">
             <a href="{{ url('/notifications') }}">
             <h3>お知らせ</h3>
-            商店街には話題がいっぱい！<br>
-            記事を読んで商店街の魅力をもっと知ろう</a>
+            <p>商店街には話題がいっぱい！<br>
+            記事を読んで商店街の魅力をもっと知ろう</p></a>
         </div>
 
         <div class="box_switch">
+           
+            <a href="{{ url('/access') }}">
             <h3>アクセス</h3>
-            商店街への行き方や近くの駐車場などを紹介！<br>
-            気軽に商店街まで来よう！
+            <p>商店街への行き方や近くの駐車場などを紹介！<br>
+            気軽に商店街まで来よう！</p></a>
         </div>
     </div>
 </body>
