@@ -8,7 +8,7 @@
     <title>西新道錦会商店街</title>
     <style>
         .home {
-            background-image: url('{{ asset('img/arcade.png') }}');
+            background-image: url("{{ asset('img/arcade.png') }}");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -47,8 +47,8 @@
 </p>
 
     <div class="content2">
-        <a href="{{ url('/map') }}">
         <div class="box_switch">
+            <a href="{{ url('/map') }}">
             <h3>MAP</h3>
             <p>商店街の並びが一目でわかる！<br>
             かわいいイラストマップ</p>
