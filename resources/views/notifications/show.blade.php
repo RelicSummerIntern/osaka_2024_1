@@ -6,26 +6,35 @@
 
 @section('content')
     <h1 class="tytle">{{ $notification->title }}</h1>
-    <div>作成日：{{ $notification->created_at }}</div>
-    <div>最終更新日：{{ $notification->updated_at }}</div>
-    <div>{{ $notification->body }}</div>
+    <div class="right-align">作成日：{{ $notification->created_at }}</div>
+    <div class="right-align">最終更新日：{{ $notification->updated_at }}</div>
+    <div class="notification-body">{{ $notification->body }}</div>
 
     <hr>
-    <div style="display: flex; justify-content: space-between;">
-        @if($prevNotification)
-            <a href="{{ route('notifications.show', ['id'=> $prevNotification->notification_id]) }}">
-                前の記事
-            </a>
-        @else
+    <div class="container">
+        <div class="body">
+            @if($prevNotification)
+                <a href="{{ route('notifications.show', ['id'=> $prevNotification->notification_id]) }}">
+                    前の記事
+                </a>
+            @else
             <span class="disabled-link">前の記事</span>
-        @endif
+            @endif
+        </div>
 
-        @if($nextNotification)
-            <a href="{{ route('notifications.show', ['id'=> $nextNotification->notification_id]) }}">
-                次の記事
-            </a>
-        @else
-            <span class="disabled-link">次の記事</span>
-        @endif
+        <!-- 一覧に戻るボタン -->
+        <div class="body">
+            <a href="{{ route('notifications.index') }}">一覧に戻る</a>
+        </div>
+
+        <div class="body">
+            @if($nextNotification)
+                <a href="{{ route('notifications.show', ['id'=> $nextNotification->notification_id]) }}">
+                    次の記事
+                </a>
+            @else
+                <span class="disabled-link">次の記事</span>
+            @endif
+        </div>
     </div>
 @endsection
