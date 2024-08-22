@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お知らせ</title>
-</head>
-<body>
-    <x-link-on-the-top/>
-    <h1>お知らせ</h1>
-    <!-- 追加ボタン -->
-    <!-- <a href="/notifications/create" style="display: inline-block; margin-bottom: 10px; padding: 5px 10px; border: 1px solid #000; background-color: #f0f0f0; text-decoration: none;">(追加)</a> -->
-    @if (session('success'))
+
+@extends('layouts.nav')
+
+@section('title', 'お知らせ管理')
+
+@section('content')
+<h1 class="tytle">お知らせ編集画面</h1>
+@if (session('success'))
         <div style="color: green; margin-bottom: 20px;">
             {{ session('success') }}
         </div>
@@ -37,5 +32,5 @@
         @endforeach
     </ul>
 
-</body>
-</html>
+    @endsection
+
