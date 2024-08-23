@@ -9,7 +9,7 @@
 <ul class="news-list">
     @foreach($notifications as $notification)
         <li class="item"><a href='http://localhost/notifications/{{ $notification -> notification_id }}'>
-        <p class="date">{{ $notification->created_at }}</p>
+        <p class="date">{{ $notification->created_at->format('Y-m-d') }}</p>
         <p class="category"><span>お知らせ</span></p>
         <p class="title">{{ $notification->title }}</p>
         </a></li>

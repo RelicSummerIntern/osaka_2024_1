@@ -51,7 +51,9 @@
             <li style="text-align: left">ロースうす切</li>
         </ul>
     </div>
-
+    <div>
+        <a href="{{ url('/map') }}" class="custom-button">イラストマップに戻る</a>
+    </div>
 
 
 
