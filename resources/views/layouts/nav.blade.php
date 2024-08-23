@@ -31,7 +31,7 @@
         <li class="{{ Request::is('/') ? 'current' : '' }}">
             <a href="{{ url('/home') }}">ホーム</a>
         </li>
-        <li class="{{ Request::is('map  ') ? 'current' : '' }}">
+        <li class="{{ Request::is('map') ? 'current' : '' }}">
             <a href="{{ url('/map') }}">マップ</a>
         </li>
         <li class="{{ Request::is('notifications') ? 'current' : '' }}">
