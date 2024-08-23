@@ -53,8 +53,8 @@
             <h3>MAP</h3>
             <p>商店街の並びが一目でわかる！<br>
             かわいいイラストマップ</p>
-        </div>
         </a>
+        </div>
 
         <div class="box_switch">
             <a href="{{ url('/notifications') }}">
