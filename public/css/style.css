@@ -154,7 +154,6 @@ nav li.current a {
     justify-content: center;
     flex: 1;
     max-width: 25%;
-
 }
 
 
@@ -279,6 +278,7 @@ a:visited {
     margin-bottom: 30px;
 }
 .notification-body {
+    text-align: left; /* テキストを左揃え */
     font-size: 1.3em; /* フォントサイズを大きくする */
     line-height: 1.5; /* 行間を調整して読みやすくする */
     margin-top: 20px; /* 上部にマージンを追加して改行を確保 */

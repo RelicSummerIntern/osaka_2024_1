@@ -8,8 +8,6 @@
     <h1 class="tytle">{{ $notification->title }}</h1>
     <div class="right-align">作成日：{{ $notification->created_at->format('Y-m-d') }}</div>
     <div class="right-align">最終更新日：{{ $notification->updated_at->format('Y-m-d') }}</div>
-    <hr>
-    <div class="notification-body">{{ $notification->body }}</div>
     <div class="notification-body">{!! nl2br(e($notification->body)) !!}</div>
 
     <hr>
