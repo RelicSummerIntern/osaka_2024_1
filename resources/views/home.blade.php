@@ -7,11 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>西新道錦会商店街</title>
     <style>
-        .home {
+          .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: url("{{ asset('img/kyoto.png') }}");
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            filter: blur(5px); /* 背景のみにぼかし効果を適用 */
+            z-index: -1; /* 背景をコンテンツの背面に配置 */
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .home {
             height: 100%;
             background-attachment: fixed; /* 背景を固定 */
         }
@@ -20,6 +34,7 @@
 </head>
 
 <body class='home'>
+    <div class="background">  </div>
     <nav>
         <ul>
             <li class="{{ Request::is('/') ? 'current' : '' }}">
@@ -69,6 +84,7 @@
             気軽に商店街まで来よう！</p></a>
         </div>
     </div>
+  
 </body>
 
 </html>
