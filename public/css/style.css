@@ -166,6 +166,7 @@ nav li.current a {
     justify-content: center;
     flex: 1;
     max-width: 25%;
+    font-weight: bold;
 }
 
 

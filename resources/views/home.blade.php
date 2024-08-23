@@ -29,6 +29,23 @@
             height: 100%;
             background-attachment: fixed; /* 背景を固定 */
         }
+        .TYTLE {
+        font-family: 'HG行書体'; /* 行書体フォント */
+        font-size: 90px;
+        padding-top: 40px;
+        text-align: center;
+        color: #F5EFE6;
+        text-shadow:
+        2px 2px 0 #000,
+        -2px 2px 0 #000,
+        2px -2px 0 #000,
+        -2px -2px 0 #000,
+        2px 0 0 #000,
+        -2px 0 0 #000, 0 2px 0 #000,
+        0 -2px 0 #000;
+        font-weight: bold;
+        text-align: center;
+        }
 
     </style>
 </head>
@@ -53,7 +70,7 @@
     </nav>
 
         <!-- <img src="{{ asset('img/arcade.png') }}" alt="商店街の画像" class="center_img">     -->
-        <h1 class="tytle2"> 西新道錦会商店街</h1>
+        <h1 class="TYTLE"> 西新道錦会商店街</h1>
 <p class="invite">
 地元民に愛されて早半世紀<br>
     歴史の町京都に根差した昔ながらの商店街<br>

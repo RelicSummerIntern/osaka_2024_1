@@ -37,6 +37,7 @@
         }
         textarea {
             resize: vertical; /* 縦方向のリサイズを許可 */
+            height: 400px; /* 高さを200pxに設定 */
         }
         button {
             background-color: #007bff;
