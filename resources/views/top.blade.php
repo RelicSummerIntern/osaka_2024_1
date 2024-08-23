@@ -37,16 +37,14 @@
         <h1 class="tytle2"> 地域商店街応援<br>
             ジモマップ</h1>
         
-<p class="invite">  
-    日本には
-    地域住民に愛される商店街がいっぱい存在！<br>
-    そんな商店街の魅力をそこのあなたにも大紹介！<br>
-    気になる商店街を選んで下のボタンをクリック！！
+<p class="invite_top">気になる商店街を選んで下のボタンをクリック！！
 </p>
-
 <div class="button-container">
-    <a href="{{ url('/home1') }}" class="btn" id="slide-link">商店街を見てみる</a>
+    <a href="{{ url('/home1') }}" class="btn" id="slide-link">
+        <span>商店街を見てみる</span>
+    </a>
 </div>
+
 <div class="slideshow-container">
     <div class="slide">
         <img src="{{ asset('img/hata.jpg') }}" alt="Image 0" class="slide-image" data-tooltip="大阪～旗の台東口通り商店会～">
@@ -61,6 +59,12 @@
     <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
     <button class="next" onclick="changeSlide(1)">&#10095;</button>
 </div>
+<p class="invite">  
+    日本には
+    地域住民に愛される商店街がいっぱい存在！<br>
+    そんな商店街の魅力をそこのあなたにも大紹介！<br>
+    
+</p>
 
 <script src="{{ asset('js/custom.js') }}"></script>
 
