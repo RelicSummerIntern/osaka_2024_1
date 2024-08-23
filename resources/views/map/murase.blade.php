@@ -52,7 +52,7 @@
         </ul>
     </div>
     <div>
-        <a href="{{ url('/map') }}" class="custom-button">イラストマップに戻る</a>
+        <a href="{{ url('/map') }}" class="custom-button">イラストMAPに戻る</a>
     </div>
 
 
