@@ -5,7 +5,7 @@
 @section('content')
 
 <h1 class="tytle">西新道錦会商店街 イラストMAP</h1>
-<p class="invite">気になるお店のアイコンをクリック！
+<p class="invite2">気になるお店のアイコンをクリック！
     <br>各お店の詳細ページに飛べます
 </p>
 <img class="center_img" src="{{ asset('img/arcade2.png') }}" usemap="#storemap" alt="Store Map" width="100%">

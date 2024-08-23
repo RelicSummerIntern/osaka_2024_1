@@ -22,7 +22,7 @@
 }
 
 .white-bg {
-    opacity: 0.5; /* 背景の透明度を下げる */
+    opacity: 0.3; /* 背景の透明度を下げる */
     filter: blur(2px); /* ぼかし効果を減少させる */
 }
 
@@ -58,13 +58,13 @@
     margin-top: -250px; /* タイトルとの間隔を調整 */
     animation: bounce 2s infinite; /* スクロールを促すアニメーション */
     text-shadow:
-    2px 2px 0 #000,
-    -2px 2px 0 #000,
-    2px -2px 0 #000,
-    -2px -2px 0 #000,
-    2px 0 0 #000,
-    -2px 0 0 #000, 0 2px 0 #000,
-    0 -2px 0 #000;
+    2px 2px 0 #fff,
+    -2px 2px 0 #fff,
+    2px -2px 0 #fff,
+    -2px -2px 0 #fff,
+    2px 0 0 #fff,
+    -2px 0 0 #fff, 0 2px 0 #fff,
+    0 -2px 0 #fff;
 }
 
 
@@ -79,7 +79,9 @@
         transform: translateY(-5px);
     }
 }
-
+.syou{
+    color: #000;
+}
     </style>
 </head>
 
@@ -89,15 +91,24 @@
     <div id="tooltip" style="position: absolute; display: none;"></div>
 
     <nav>
-        <ul>
-            <li class="{{ Request::is('/') ? 'current' : '' }}">
-                <a href="{{ url('/') }}">トップ</a>
-            </li>
-            <li>
-                <a href="{{ url('/login') }}">管理者ログイン</a>
-            </li>
-        </ul>
-    </nav>
+    <ul>
+        <li class="{{ Request::is('/') ? 'current' : '' }}">
+            <a href="{{ url('/') }}">トップ</a>
+        </li>
+        <li class="dropdown">
+            <a class="syou">商店街</a>
+            <ul class="dropdown-menu">
+                <li><a href="{{ url('/home2') }}">旗の台東口通り商店街</a></li>
+                <li><a href="{{ url('/home') }}">西新道錦会商店街</a></li>
+                <li><a href="{{ url('/home3') }}">新町通り商店街</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="{{ url('/login') }}">管理者ログイン</a>
+        </li>
+    </ul>
+</nav>
+
 
     <h1 class="tytle3">地域商店街応援<br>ジモマップ</h1>
 
@@ -119,7 +130,7 @@
 
     <div class="slideshow-container">
         <div class="slide">
-            <img src="{{ asset('img/hata.jpg') }}" alt="Image 0" class="slide-image" data-tooltip="大阪～旗の台東口通り商店会～">
+            <img src="{{ asset('img/hata.jpg') }}" alt="Image 0" class="slide-image" data-tooltip="大阪～旗の台東口通り商店街～">
         </div>
         <div class="slide">
             <img src="{{ asset('img/DSC.JPG') }}" alt="Image 2" class="slide-image" data-tooltip="京都～西新道錦会商店街～">
