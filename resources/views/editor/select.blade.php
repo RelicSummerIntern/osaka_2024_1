@@ -45,9 +45,28 @@
             background-color: #007bff;
             color: #fff;
         }
+        .alert {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
     </style>
 </head>
 <body>
+    <!-- Success Message -->
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
     <h1>ここでは各商店街のお知らせを編集できます<br>変種する商店街を選択してください</h1>
     <ul>
         <li><a href="/com">旗の台東口通り商店会</a></li>

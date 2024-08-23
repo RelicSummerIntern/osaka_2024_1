@@ -22,7 +22,7 @@ class AuthenticatedSessionController extends Controller
     public function create(): View|RedirectResponse
     {
         if (Session::get('login_flag') === true) {
-            return redirect()->to('/edit');
+            return redirect()->to('/select');
         }
         $editors = Editor::all();
         return view('editor.login', ['editors'=>$editors]);
@@ -42,7 +42,10 @@ class AuthenticatedSessionController extends Controller
             Session::put('login_flag', true);
 
             // 成功メッセージを設定してリダイレクト
-            return redirect()->route('select')->with('success', '管理者ログインしたで');
+            return redirect()->route('select')->with('success', '管理者ログインしました');
+        }
+        else {
+            return redirect()->to('/login')->with('error', 'IDまたはパスワードが違います');
         }
     }
 
