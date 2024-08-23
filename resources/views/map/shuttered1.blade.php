@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -59,21 +59,44 @@
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>空き店舗のお知らせ</h1>
-        <p>元中華料理屋なので、キッチン、シンク等完備。<br>内装のリフォームだけで飲食店を始められます。</p>
-        
-        <div class="map-container">
-            <img src="{{ asset('img/kittin.jpg') }}" usemap="#storemap" alt="Store Map" width="400">
-        </div>
-        
-        <div class="contact-info">
-            <h2>ご相談はこちら</h2>
-            <p><strong>連絡先:</strong> 080-1234-5678</p>
-            <p><strong>メール:</strong> <a href="mailto:info@example.com">info@example.com</a></p>
-            <p><strong>担当:</strong> ×× 不動産</p>
-        </div>
+<body> -->
+@extends('layouts.nav')
+
+@section('title', '空き店舗')
+
+@section('content')
+    <div style="background-color: #ffffff;">
+        <div style="font-size: 1px">　</div>
+        <h1 class='tytle'>空き店舗のお知らせ</h1>
+        <div class="map-bar"></div>
+        <div style="font-size: 1px">　</div>
     </div>
-</body>
-</html>
+
+    <p>元中華料理屋なので、キッチン、シンク等完備。<br>内装のリフォームだけで飲食店を始められます。</p>
+    
+    <div class="map-container">
+        <img src="{{ asset('img/kittin.jpg') }}" usemap="#storemap" alt="Store Map" width="400">
+    </div>
+    
+    <div class="map-bar"></div>
+    
+    <div class="">
+        <h2 style="text-align: center; background-color: #F5F0E6;">
+            お問い合わせはこちら
+        </h2>
+        <p><strong>連絡先:</strong> 080-1234-5678</p>
+        <p><strong>メール:</strong> <a href="mailto:info@example.com">info@example.com</a></p>
+        <p><strong>担当:</strong> ×× 不動産</p>
+    </div>
+    <br>
+    <div>
+        <a href="{{ url('/map') }}" class="custom-button">イラストマップに戻る</a>
+    </div>
+
+
+@endsection
+
+
+
+<!-- </body>
+</html> -->

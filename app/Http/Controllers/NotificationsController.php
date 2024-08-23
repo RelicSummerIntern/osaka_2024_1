@@ -10,7 +10,8 @@ class NotificationsController extends Controller
 {
     //
     public function index(){
-        $notifications = Notification::all();
+        // $notifications = Notification::all();
+        $notifications = Notification::orderBy('created_at', 'desc')->get();
         return view('notifications.index', ['notifications'=>$notifications]);
     }
     public function show($id){
@@ -20,13 +21,14 @@ class NotificationsController extends Controller
         $notification = Notification::where('notification_id', $id)->firstOrFail();
 
         // 1つ前のレコードを取得
-        $prevNotification = Notification::where('notification_id', '<', $id) //$notification_idより小さいカラムnotification_idを持つレコードを取ってくる
-        ->orderBy('notification_id', 'desc') // desc：降順に並べる
+        // $prevNotification = Notification::where('notification_id', '<', $id) // $notification_idより小さいカラムnotification_idを持つレコードを取ってくる
+        $prevNotification = Notification::where('created_at', '<', $notification->created_at) // $notification->created_atより小さい(つまり時間が前の)カラムcreated_atを持つレコードを取ってくる
+        ->orderBy('created_at', 'desc') // desc：降順に並べる
         ->first(); // 最初のレコードを取ってくる
 
         // 1つ後のレコードを取得
-        $nextNotification = Notification::where('notification_id', '>', $id)
-        ->orderBy('notification_id', 'asc') // asc：昇順に並べる
+        $nextNotification = Notification::where('created_at', '>', $notification->created_at) 
+        ->orderBy('created_at', 'asc') // asc：昇順に並べる
         ->first(); // 最初のレコードを取ってくる
 
         return view('notifications.show', ['prevNotification'=>$prevNotification, 'notification'=>$notification, 'nextNotification'=>$nextNotification]);
