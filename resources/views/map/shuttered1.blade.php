@@ -68,7 +68,7 @@
     <div style="background-color: #ffffff;">
         <div style="font-size: 1px">　</div>
         <h1 class='tytle'>空き店舗のお知らせ</h1>
-        <div class="map-bar"></div>
+        <hr style="height: 2px; background-color: #C2A366; border: none;">
         <div style="font-size: 1px">　</div>
     </div>
 
@@ -78,7 +78,7 @@
         <img src="{{ asset('img/kittin.jpg') }}" usemap="#storemap" alt="Store Map" width="400">
     </div>
     
-    <div class="map-bar"></div>
+    <hr style="height: 2px; background-color: #C2A366; border: none;">
     
     <div class="">
         <h2 style="text-align: center; background-color: #F5F0E6;">
