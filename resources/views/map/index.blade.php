@@ -3,30 +3,9 @@
 @section('title', 'マップページ')
 
 @section('content')
-<style>
-    /* システムフォントの指定 */
-    .tytle {
-        font-family: 'HG行書体'; /* 行書体フォント */
-        font-size: 40px;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    .Invite {
-        font-family: 'ＭＳ 明朝'; /* 太くて見やすいフォント */
-        font-size: 24px;
-        font-weight: bold; /* 太め */
-        text-align: center;
-    }
-
-    .center_img {
-        display: block;
-        margin: 0 auto;
-    }
-</style>
 
 <h1 class="tytle">西新道錦会商店街 イラストMAP</h1>
-<p class="Invite">気になるお店のアイコンをクリック！
+<p class="invite">気になるお店のアイコンをクリック！
     <br>各お店の詳細ページに飛べます
 </p>
 <img class="center_img" src="{{ asset('img/arcade2.png') }}" usemap="#storemap" alt="Store Map" width="100%">
