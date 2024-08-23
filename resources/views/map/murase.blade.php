@@ -6,7 +6,7 @@
     <div style="background-color: #ffffff;">
         <div style="font-size: 1px">　</div>
         <h1 class='tytle'>むら瀬</h1>
-        <div class="map-bar"></div>
+        <hr style="height: 2px; background-color: #C2A366; border: none;">
         <div style="font-size: 1px">　</div>
     </div>
     <h3 style="text-align: center;">
@@ -14,7 +14,7 @@
         皆さんも是非一度買いに来てください！！<br>
     </h3>
     
-    <div class="map-bar"></div>
+    <hr style="height: 2px; background-color: #C2A366; border: none;">
 
     <div >
     <h2 style="text-align: center; background-color: #F5F0E6;">
@@ -31,7 +31,7 @@
         </div>
         
     </div>
-    <div class="map-bar"></div>
+    <hr style="height: 2px; background-color: #C2A366; border: none;">
 
     <h2 style="text-align: center; background-color: #F5F0E6;">
         メニュー（抜粋）
