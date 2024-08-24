@@ -38,7 +38,7 @@
     </nav>
 
         <!-- <img src="{{ asset('img/arcade.png') }}" alt="商店街の画像" class="center_img">     -->
-        <h1 class="tytle2"> 大阪～旗の台東口通り商店街</h1>
+        <h1 class="tytle2"> 旗の台東口通り商店街</h1>
 <p class="invite">
 大阪市に位置する賑やかで親しみやすいエリアです。<br>
 地元の食材や日用品が揃う店舗が並び、地域密着型の温かい雰囲気が特徴。<br>
